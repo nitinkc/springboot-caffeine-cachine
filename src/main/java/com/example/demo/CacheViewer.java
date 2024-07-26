@@ -31,7 +31,7 @@ public class CacheViewer {
         }
     }
 
-   // @Scheduled(fixedDelay = 15000) // 15 seconds
+    @Scheduled(fixedDelay = 15000) // 15 seconds
     public void viewAllCache() {
         Collection<String> cacheNames = cacheManager.getCacheNames();
 
@@ -50,6 +50,7 @@ public class CacheViewer {
                 log.info("Cache '" + cacheName + "' is not a Caffeine cache.");
             }
         }
+        log.info("==========================================");
     }
 }
 

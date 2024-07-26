@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import lombok.RequiredArgsConstructor;
+import com.example.demo.service.MyService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
@@ -27,6 +27,5 @@ public class MyBootRunner implements CommandLineRunner {
         //Do processing
         log.info(myService.getCachedData("Nitin"));
         cacheViewer.viewCache("mycache");
-
     }
 }
